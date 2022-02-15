@@ -126,6 +126,7 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 
+# 로깅설정
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -167,8 +168,8 @@ LOGGING = {
             'level': 'INFO',
             'filters': ['require_debug_false'],
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': BASE_DIR / 'log/mysite.log',
-            'maxBytes': 1024*1024*5,
+            'filename': BASE_DIR / 'logs/mysite.log',
+            'maxBytes': 1024*1024*5,  # 5 MB
             'backupCount': 5,
             'formatter': 'standard',
         },
